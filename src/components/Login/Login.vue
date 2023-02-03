@@ -75,7 +75,7 @@ export default{
             })
             .catch((error)=>{
                 // Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
-				console-log("")
+				console.log("")
             })
         }
     }
