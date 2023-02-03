@@ -1,6 +1,6 @@
 
 var backendRoute = {
-    data : 'https://teamcomunicaciones.com.co/api/'
+    data : 'http://teamcomunicaciones.com.co/api/'
 }
 
 export default backendRoute;
