@@ -237,7 +237,7 @@
             }
         },
         created(){
-            this.validate()
+            //this.validate()
             console.log('print')
             
         }
