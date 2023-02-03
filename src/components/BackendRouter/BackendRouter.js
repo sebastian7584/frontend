@@ -1,6 +1,6 @@
 
 var backendRoute = {
-    data : 'http://http://134.122.26.24/api/'
+    data : 'https://teamcomunicaciones.com.co/api/'
 }
 
 export default backendRoute;
