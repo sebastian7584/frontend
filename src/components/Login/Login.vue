@@ -49,7 +49,7 @@
 <script>
 import axios from 'axios'
 import router from '../../router'
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import backendRouter from  '../BackendRouter/BackendRouter'
 
 
@@ -74,7 +74,7 @@ export default{
                 router.push('/')
             })
             .catch((error)=>{
-                // Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
+                Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
 				console.log(error.response.data)
             })
         }

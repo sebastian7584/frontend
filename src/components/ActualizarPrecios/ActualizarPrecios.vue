@@ -174,6 +174,7 @@
                 }
 
                 const path = backendRouter.data+'translateProducts/admin'
+                console.log(data)
                 axios.post(path, data).then((responser)=>{
                     this.cont++
                     this.form.product= this.items[this.cont][0]
