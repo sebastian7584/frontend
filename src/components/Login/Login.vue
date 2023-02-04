@@ -74,7 +74,7 @@ export default{
                 router.push('/')
             })
             .catch((error)=>{
-                Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
+                window.alert(error.response.data.detail)
 				console.log(error.response.data)
             })
         }
