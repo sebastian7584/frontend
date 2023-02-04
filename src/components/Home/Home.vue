@@ -24,7 +24,7 @@
 <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
 <script>
 import axios from 'axios'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import router from '../../router'
 import backendRouter from  '../BackendRouter/BackendRouter'
 
@@ -42,12 +42,12 @@ export default{
       })
       .catch((error)=>{
         router.push('/login')
-        Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
+        // Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
       })
     }
   },
   created(){
-    this.validate()
+    // this.validate()
     
   }
 }
