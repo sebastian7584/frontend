@@ -42,12 +42,12 @@ export default{
       })
       .catch((error)=>{
         router.push('/login')
-        // Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
+        windows.alert(error.response.data.detail)
       })
     }
   },
   created(){
-    // this.validate()
+    this.validate()
     
   }
 }
