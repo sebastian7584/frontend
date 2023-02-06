@@ -2,6 +2,7 @@
     <div class="container h-100">
         <form >
             <div>
+                <SidebarMenu />
                 <v-app id="inspire">
                     <v-container v-if="create==true">
                         <h1>{{titulo}}</h1>
@@ -62,6 +63,7 @@
     import backendRouter from  '../BackendRouter/BackendRouter'
     import Swal from 'sweetalert2'
     import router from '../../router'
+    import SidebarMenu from '../SidebarMenu/SidebarMenu.vue'
     
     export default{
         data(){
@@ -241,7 +243,10 @@
             //this.validate()
             console.log('print')
             
-        }
+        },
+        components: {
+            SidebarMenu
+        },
     }
     </script>
     
