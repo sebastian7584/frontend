@@ -14,8 +14,8 @@
                     <br><br>
                     <li @click="menu.controlInterno= !menu.controlInterno">CONTROL INTERNO</li>
                     <ul v-if="menu.controlInterno" class="submenu">
-                        <li><a href="control-interno">Actualizar precios prepagos</a></li>
-                        <li><a href="control-interno">Actualizar precios postpagos</a></li>
+                        <li><a href="actualizar-equipos-prepagos">Actualizar precios prepagos</a></li>
+                        <li><a href="actualizar-equipos-postpago">Actualizar precios postpagos</a></li>
                     </ul>
                     <p style="margin-top: 20px;"></p>
                     <li @click="menu.gestionHumana= !menu.gestionHumana">GESTIÓN HUMANA</li>
