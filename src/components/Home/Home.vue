@@ -7,6 +7,7 @@
 
 <script>
 import SidebarMenu from '../SidebarMenu/SidebarMenu.vue'
+import backendRouter from  '../BackendRouter/BackendRouter'
 
 export default {
   name: 'Home',
