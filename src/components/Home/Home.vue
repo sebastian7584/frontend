@@ -25,7 +25,8 @@ export default {
     }
   },
   created(){
-    // this.validate()
+    this.validate()
+    //s
     
   }
 

@@ -240,8 +240,7 @@
             }
         },
         created(){
-            //this.validate()
-            console.log('print')
+            this.validate()
             
         },
         components: {
