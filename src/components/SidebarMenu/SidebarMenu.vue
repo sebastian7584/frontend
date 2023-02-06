@@ -113,8 +113,13 @@ export default {
 }
 
 .submenu{
-    list-style: none;
+  list-style: none;
+}
+
+.submenu a{
     font-size: 15px;
+    color: black;
+    text-decoration: none;
 }
 
 .closeMenu{
@@ -123,10 +128,10 @@ export default {
     right: 20px;
 }
 
-a{
+/* a{
     text-decoration: none;
     color: inherit;
-}
+} */
 
 
 
