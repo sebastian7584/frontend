@@ -1,6 +1,6 @@
 <template>
     <div>
-      <b-button v-b-toggle.sidebar-no-header class="menuButton" color="#E11419"> 
+      <b-button v-b-toggle.sidebar-no-header class="menuButton" variant="danger"> 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg></b-button>
@@ -50,7 +50,7 @@
                 </ul>
               </b-nav>
             </nav>
-            <b-button color="#E11419" class="closeMenu" block @click="hide">
+            <b-button variant="danger" class="closeMenu" block @click="hide">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
@@ -97,10 +97,12 @@ export default {
  </script>
 
 <style>
+.btn-danger {
+  background-color: #E11419;
+  border-color: #E11419;
+}
 
 .menuButton{
-    background-color: #E11419;
-    border-color: #E11419;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -116,8 +118,6 @@ export default {
 }
 
 .closeMenu{
-    background-color: #E11419;
-    border-color: #E11419;
     position: absolute;
     bottom: 20px;
     right: 20px;
