@@ -135,7 +135,7 @@
                             {text:'Eliana Rodas', value:'17'},
             
                         ]
-                const path = backendRouter.data+'translateProducts/translate'
+                const path = backendRouter.data+'translateProductsPostpago/translate'
                 axios.post(path, tempData).then((responser)=>{
                     this.create = responser.data.validate
                     this.items = responser.data.data
@@ -171,7 +171,7 @@
                     'active' : this.form.active
                 }
 
-                const path = backendRouter.data+'translateProducts/admin'
+                const path = backendRouter.data+'translateProductsPostpago/admin'
                 console.log(data)
                 axios.post(path, data).then((responser)=>{
                     this.cont++
