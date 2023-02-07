@@ -150,6 +150,7 @@
                     this.isLoading = false
                     if (this.create == false){
                         this.form.product= this.items[this.cont][0]
+                         
                         
                     }
                 })
