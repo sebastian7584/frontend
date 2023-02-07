@@ -3,6 +3,9 @@
         <form >
             <div>
                 <SidebarMenu />
+                <div class="vld-parent">
+                    <loading :active.syn="isLoading" :can-cancel="true" :on-cancel="onCancel" :is-full-page="fullPage"></loading>
+                </div>
                 <v-app id="inspire">
                     <v-container v-if="create==true">
                         <h1>{{titulo}}</h1>
@@ -64,6 +67,8 @@
     import Swal from 'sweetalert2'
     import router from '../../router'
     import SidebarMenu from '../SidebarMenu/SidebarMenu.vue'
+    import Loading from 'vue-loading-overlay';
+    import 'vue-loading-overlay/dist/vue-loading.css';
     
     export default{
         data(){
@@ -81,7 +86,9 @@
                     stok:'',
                     iva:'',
                     active:'',
-                }
+                },
+                isLoading: false,
+                fullPage: true
                 
             }
         },
@@ -114,6 +121,7 @@
                 this.accion_boton = this.descargarExcel
                 const tempData = this.items
                 this.items = []
+                this.isLoading = true
                 this.cabecera=[
                             {text:'Producto', value:'0'},
                             {text:'Costo Actual', value:'1'},
@@ -139,6 +147,7 @@
                 axios.post(path, tempData).then((responser)=>{
                     this.create = responser.data.validate
                     this.items = responser.data.data
+                    this.isLoading = false
                     if (this.create == false){
                         this.form.product= this.items[this.cont][0]
                         
@@ -236,7 +245,8 @@
             
         },
         components: {
-            SidebarMenu
+            SidebarMenu,
+            Loading
         },
     }
     </script>
