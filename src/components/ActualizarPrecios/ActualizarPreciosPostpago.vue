@@ -186,15 +186,11 @@
                         this.titulo_boton = 'TRADUCIR'
                         this.accion_boton = this.traducir
                         this.cabecera=[
-                            {text:'Equipo', value:'0'},
-                            {text:'con IVA', value:'1'},
-                            {text:'Descuento', value:'2'},
-                            {text:'-IVA +Descuento', value:'3'},
-                            {text:'Total', value:'4'},
-                            {text:'Descuento agente', value:'5'},
-                            {text:'Precio - IVA', value:'6'},
-                            {text:'Precio + IVA', value:'7'},
-            
+                        {text:'Equipo', value:'0'},
+                        {text:'costo', value:'1'},
+                        {text:'0 a 5 meses', value:'2'},
+                        {text:'6 a 23 meses', value:'3'},
+                        {text:'mayor a 24 meses', value:'4'},
                         ]
                     }else{
                         this.form.product= this.items[this.cont][0]

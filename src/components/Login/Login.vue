@@ -74,8 +74,7 @@ export default{
                 router.push('/')
             })
             .catch((error)=>{
-                window.alert(error.response.data.detail)
-				console.log(error.response.data)
+                this.$swal(error.response.data.detail)
             })
         }
     }
@@ -137,6 +136,7 @@ export default{
 		}
 		.login_container {
 			padding: 0 2rem;
+			
 		}
 		.input-group-text {
 			background: #E11419 !important;

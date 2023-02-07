@@ -10,11 +10,19 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import  BootstrapVueIcons  from 'bootstrap-vue'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+const options = {
+  confirmButtonColor: '#E11419',
+  cancelButtonColor: '#ff7674',
+};
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
 Vue.use (BootstrapVueIcons);
 Vue.use(VueCookies);
+Vue.use(VueSweetalert2, options);
 
 
 /* eslint-disable no-new */
