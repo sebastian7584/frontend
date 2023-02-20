@@ -58,13 +58,12 @@
     </div>
   
     </template>
+
     <script>
-    
     import axios from 'axios'
     import readXlsFile from 'read-excel-file'
     import exportFromJSON from 'export-from-json'
     import backendRouter from  '../BackendRouter/BackendRouter'
-    import Swal from 'sweetalert2'
     import router from '../../router'
     import SidebarMenu from '../SidebarMenu/SidebarMenu.vue'
     import Loading from 'vue-loading-overlay';
@@ -100,7 +99,8 @@
                 })
                 .catch((error)=>{
                     router.push('/login')
-                    //Swal.fire({text:error.response.data.detail, confirmButtonColor:'#E11419'})
+                    this.$swal(error.response.data.detail)
+                    
                 })
             },
             subirExcel(){
@@ -207,6 +207,9 @@
                         this.form.stok=''
                     }
                 })
+                .catch((error)=>{
+                    this.$swal(error.response.data.detail)
+                })
             },
             omitirTranslate(){
                 this.cont++
@@ -250,8 +253,10 @@
             Loading
         },
     }
+    
     </script>
     
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style>
+    
     </style>
