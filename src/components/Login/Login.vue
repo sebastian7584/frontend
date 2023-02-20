@@ -21,12 +21,12 @@
 							</div>
 							<input type="password" name="" class="form-control input_pass" value="" placeholder="password" v-model.trim="form.password">
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input" id="customControlInline">
 								<label class="custom-control-label" for="customControlInline">Remember me</label>
 							</div>
-						</div>
+						</div> -->
 							<div class="d-flex justify-content-center mt-3 login_container">
 				 	<button type="button" name="button" class="btn login_btn" @click="logineo">Login</button>
 				   </div>
@@ -69,6 +69,7 @@ export default{
                 'email': this.form.username,
                 'password': this.form.password
             }
+			
             axios.post(path, access).then((response)=>{
 				this.$cookies.set('jwt', response.data.jwt);
                 router.push('/')

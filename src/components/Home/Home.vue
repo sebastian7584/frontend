@@ -2,7 +2,7 @@
   <div>
     <SidebarMenu />
     <div class="vld-parent">
-      <loading :active.syn="isLoading" :can-cancel="true" :on-cancel="onCancel" :is-full-page="fullPage"></loading>
+      <loading :active.syn="isLoading" :can-cancel="true"  :is-full-page="fullPage"></loading>
     </div>
   </div>
   

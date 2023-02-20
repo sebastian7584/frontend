@@ -16,6 +16,7 @@
                     <ul v-if="menu.controlInterno" class="submenu">
                         <li><a href="actualizar-equipos-prepagos">Actualizar precios prepagos</a></li>
                         <li><a href="actualizar-equipos-postpago">Actualizar precios postpagos</a></li>
+                        <li><a href="administrar-traducciones">Administrar traducciones</a></li>
                     </ul>
                     <p style="margin-top: 20px;"></p>
                     <li @click="menu.gestionHumana= !menu.gestionHumana">GESTIÓN HUMANA</li>

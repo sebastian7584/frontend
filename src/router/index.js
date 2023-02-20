@@ -5,6 +5,8 @@ import Login from '@/components/Login/Login'
 import Home from '@/components/Home/Home'
 import ActualizarPrecios from '@/components/ActualizarPrecios/ActualizarPrecios'
 import ActualizarPreciosPostpago from '@/components/ActualizarPrecios/ActualizarPreciosPostpago'
+import AdministrarTraducciones from '@/components/ActualizarPrecios/AdministrarTraducciones'
+
 
 Vue.use(Router)
 
@@ -29,6 +31,11 @@ export default new Router({
       path: '/actualizar-equipos-postpago',
       name: 'Actualizar equipos postpago',
       component: ActualizarPreciosPostpago
+    },
+    {
+      path: '/administrar-traducciones',
+      name: 'Administrar traducciones',
+      component: AdministrarTraducciones
     },
   ],
   mode: 'history'

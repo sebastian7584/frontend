@@ -4,7 +4,7 @@
             <div>
                 <SidebarMenu />
                 <div class="vld-parent">
-                    <loading :active.syn="isLoading" :can-cancel="true" :on-cancel="onCancel" :is-full-page="fullPage"></loading>
+                    <loading :active.syn="isLoading" :can-cancel="true"  :is-full-page="fullPage"></loading>
                 </div>
                 <v-app id="inspire">
                     <v-container v-if="create==true">
@@ -87,7 +87,9 @@
                     active:'',
                 },
                 isLoading: false,
-                fullPage: true
+                fullPage: true,
+                checkIva: false,
+                checkActive: false
                 
             }
         },
