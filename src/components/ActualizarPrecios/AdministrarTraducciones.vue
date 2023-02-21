@@ -163,6 +163,10 @@
                 this.getTranslates()
                 this.$swal('Item editado')
             })
+            .catch((error)=>{
+                    this.$swal(error.response.data.detail)
+                })
+
         },
 
         deleteItemBack(equipo){
@@ -175,6 +179,9 @@
                 this.create=true
                 
             })
+            .catch((error)=>{
+                    this.$swal(error.response.data.detail)
+                })
 
         },
 
@@ -188,7 +195,11 @@
                 
             })
         }
-    }
+    },
+    created(){
+        this.validate()
+        
+    },
 
 
   }
