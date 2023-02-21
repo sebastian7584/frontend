@@ -24,6 +24,8 @@
                                             <v-divider class="mx-4" inset vertical>
                                             </v-divider>
                                             <v-spacer></v-spacer>
+                                            <v-btn v-if="crediminuto.length>0" color="#E11419" dark class="mb-2" @click=descargarExcelCrediminuto >CREDIMINUTO</v-btn>
+                                            <v-divider class="mx-4" inset vertical></v-divider>
                                             <v-btn color="#E11419" dark class="mb-2" @click=accion_boton >{{titulo_boton}}</v-btn>
                         
                                         </v-toolbar>
@@ -77,6 +79,7 @@
                 titulo: "Precios Equipos Nuevos Prepago",
                 items:[],
                 cabecera:[],
+                crediminuto:[],
                 titulo_boton: 'TRADUCIR' ,
                 accion_boton: this.traducir,
                 iva: true,
@@ -122,7 +125,7 @@
                 })
             },
             traducir(){
-                this.titulo_boton = 'paso2'
+                this.titulo_boton = 'STOK'
                 this.accion_boton = this.descargarExcel
                 const tempData = this.items
                 this.items = []
@@ -152,6 +155,7 @@
                 axios.post(path, tempData).then((responser)=>{
                     this.create = responser.data.validate
                     this.items = responser.data.data
+                    this.crediminuto = responser.data.crediminuto
                     this.isLoading = false
                     if (this.create == false){
                         this.form.product= this.items[this.cont][0]
@@ -247,6 +251,13 @@
             descargarExcel(){
                 
                 const data = this.items;
+                const fileName = 'download';
+                const exportType = exportFromJSON.types.xls
+                exportFromJSON({data, fileName, exportType})
+            },
+            descargarExcelCrediminuto(){
+                
+                const data = this.crediminuto;
                 const fileName = 'download';
                 const exportType = exportFromJSON.types.xls
                 exportFromJSON({data, fileName, exportType})
